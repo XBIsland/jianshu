@@ -40,9 +40,39 @@ export const NavItem = styled.div`
   }
   height: 56px;
 `;
+export const SearchWrapper = styled.div`
+  position: relative;
+  float: left;
+  .iconfont {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    &.focused {
+      background: #969696;
+      color: #eee;
+    }
+  }
+`;
 export const NavSearch = styled.input.attrs({
   placeholder: "搜索"
 })`
+  /* &.silde-enter {
+    transition: all 0.5s ease-out;
+  }
+  &.silde-enter-active {
+    width: 320px;
+  }
+  &.silde-exit {
+    transition: all 0.5s ease-out;
+  }
+  &.silde-exit-active {
+    width: 240px;
+  } */
   width: 240px;
   height: 38px;
   margin-top: 9px;
@@ -54,8 +84,54 @@ export const NavSearch = styled.input.attrs({
   font-size: 14px;
   outline: none;
   box-sizing: border-box;
+  color: #666;
+  transition: all 0.5s;
   &::placeholder {
     color: #999;
+  }
+  &.focused {
+    width: 320px;
+  }
+`;
+export const SearchInfo = styled.div`
+  position: absolute;
+  left: 20px;
+  top: 56px;
+  width: 250px;
+  padding: 0 20px;
+  /* background: red; */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+`;
+export const SearchInfoTitle = styled.div`
+  margin-top: 20px;
+  margin-bottom: 15px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #969696;
+`;
+export const SearchInfoSwitch = styled.span`
+  float: right;
+  font-size: 13px;
+  &:hover {
+    color: #333;
+  }
+`;
+export const SearchInfoItem = styled.a`
+  display: block;
+  float: left;
+  padding: 0 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  line-height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #969696;
+  font-size: 12px;
+  cursor: pointer;
+  &:hover {
+    color: #333;
+    border: 1px solid #b4b4b4;
   }
 `;
 export const Addition = styled.div`
@@ -79,5 +155,8 @@ export const Button = styled.div`
   &.writting {
     background: #ea6f5a;
     color: #fff;
+  }
+  .iconfont {
+    margin-right: 5px;
   }
 `;
