@@ -25,3 +25,6 @@ export const HomeRight = styled.div`
   margin-left: 40px;
   background: red;
 `;
+
+export const ListWrapper = styled.div`
+`
